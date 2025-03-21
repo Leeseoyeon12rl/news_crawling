@@ -2,7 +2,8 @@
 BBC most read top10 news HTML crawling + NewsAPI recent news real-time crawling
 
 ## 📌 프로젝트 개요
-이 프로젝트는 뉴스 데이터를 수집하고, MongoDB 또는 Cassandra에 저장하는 시스템입니다. BBC Most Read 기사를 Selenium을 활용해 크롤링하거나, NewsAPI를 통해 최신 뉴스를 받아서 데이터베이스에 저장합니다.
+이 프로젝트는 뉴스 데이터를 수집하고, MongoDB 또는 Cassandra에 저장하는 시스템으로,
+BBC Most Read 기사를 Selenium을 활용해 크롤링하거나, NewsAPI를 통해 최신 뉴스를 받아서 데이터베이스에 저장한다.
 
 ## 📂 파일 구조 및 주요 함수
 ```
@@ -29,14 +30,14 @@ BBC most read top10 news HTML crawling + NewsAPI recent news real-time crawling
 └── README.md             # 프로젝트 설명 문서
 ```
 ## ✅ 주의 사항
-MongoDB 및 Cassandra의 데이터베이스 및 테이블/컬렉션이 미리 설정되어 있어야 합니다.
+MongoDB 및 Cassandra의 데이터베이스 및 테이블/컬렉션이 미리 설정되어 있어야 한다.
 
-Selenium 크롤러 사용 시 크롬 드라이버가 필요합니다 (webdriver-manager를 사용하여 자동 설치됨).
+Selenium 크롤러 사용 시 크롬 드라이버가 필요 (webdriver-manager를 사용하여 자동 설치됨).
 
 ## 🚀 실행 방법
 ### 1. 환경 설정
 
-Python 3.x 필요
+Python 3.11.7 필요
 
 필요한 라이브러리 설치:
 
@@ -44,9 +45,9 @@ Python 3.x 필요
 pip install cassandra-driver pymongo requests selenium webdriver-manager
 ```
 
-MongoDB와 Cassandra가 실행 중이어야 합니다.
+MongoDB와 Cassandra가 실행 중이어야 한다.
 
-NewsAPI 사용을 위해 API 키가 필요합니다.
+NewsAPI 사용을 위해 API 키가 필요하다.
 
 ### 2. 실행 명령어 예시
 

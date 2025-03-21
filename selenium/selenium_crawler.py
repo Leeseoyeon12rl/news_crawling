@@ -31,8 +31,8 @@ def crawl_bbc_most_read():
     driver.get(url)
     time.sleep(random.uniform(3, 6))  # 페이지 로딩 대기 (랜덤 딜레이)
 
-    print("📌 현재 URL:", driver.current_url)
-    print("📌 현재 페이지 제목:", driver.title)
+    print("현재 URL:", driver.current_url)
+    print("현재 페이지 제목:", driver.title)
     
     # Most Read 기사 링크 찾기
     try:
@@ -48,10 +48,10 @@ def crawl_bbc_most_read():
                 article_links.append(link)
 
         article_links = list(set(article_links))[:10]  # 중복 제거 후 상위 10개 선택
-        print(f"✅ Most Read 기사 {len(article_links)}개 링크 수집 완료")
+        print(f"Most Read 기사 {len(article_links)}개 링크 수집 완료")
 
     except Exception as e:
-        print(f"❌ XPath 에러: {e}")
+        print(f"XPath 에러: {e}")
         driver.quit()
         return None
     
@@ -67,14 +67,14 @@ def crawl_bbc_most_read():
             paragraphs = driver.find_elements(By.XPATH, "//article//p")
             content = "\n".join([p.text for p in paragraphs if p.text.strip()])
 
-            print(f"✅ 크롤링 성공: {article_url}")
-            print(f"✅ 크롤링된 본문: {content[:100]}...")
+            print(f"크롤링 성공: {article_url}")
+            print(f"크롤링된 본문: {content[:100]}...")
 
             # 크롤링한 기사 데이터를 리스트에 저장
             articles_data.append((article_url, content))
             
         except Exception as e:
-            print(f"❌ 본문 크롤링 실패: {e}")
+            print(f"본문 크롤링 실패: {e}")
 
     driver.quit()
     
